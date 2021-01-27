@@ -78,7 +78,7 @@ const Contact = () => {
         <DivContact>
             <ContactTitle id='fale_comigo'>Fale comigo</ContactTitle>
             <ContactP>Dúvidas? Preencha os campos abaixo com os seguintes dados que em breve entrarei em contato.</ContactP>
-            {<Form onSubmit={formSubmit}>
+            <Form onSubmit={formSubmit}>
                 <Label htmlFor='name'>
                     <BiPen />
                     <Input type='text' required placeholder='Nome' name='name' onChange={handleName} value={name} />
@@ -107,7 +107,7 @@ const Contact = () => {
                 <Button type='submit'>
                     <RiSendPlaneFill /> Enviar
                 </Button>
-            </Form>}
+            </Form>
             <a href='/'><HeaderLogo src={Logo} alt='Logo' /></a>
             <SecondaryMenu>
                 <SecondaryMenuLeft>

@@ -1,17 +1,29 @@
 import React from 'react'
-import { DivPortfolio, DivScreen, DivProject } from './styles'
-import { linkProjects } from './projects'
+import { DivPortfolio, DivScreen, DivScreenReact, DivProject } from './styles'
+import { Projects, ProjectsReact } from './projects'
 
 const Portfolio = () => {
     return (
         <DivPortfolio id='portfolio'>
             <DivScreen>
-                {linkProjects.map((image, index) => (
-                    <a href={image.link} target='_blank' rel='noopener noreferrer'>
-                        <DivProject key={index} src={image.img} alt={image.id} />
-                    </a>
-                ))}
+                <DivProject>
+                    {Projects.map((project, index) => (
+                        <a href={project.link} target='_blank' rel='noopener noreferrer'>
+                            <img key={index} src={project.img} alt={project.id} />
+                        </a>  
+                    ))}
+                </DivProject>
             </DivScreen>
+
+            <DivScreenReact>
+                <DivProject>
+                    {ProjectsReact.map((project, index) => (
+                        <a href={project.link} target='_blank' rel='noopener noreferrer'>
+                            <img key={index} src={project.img} alt={project.id} />
+                        </a>  
+                    ))}
+                </DivProject>
+            </DivScreenReact>
         </DivPortfolio>
     )
 }

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import header from '../../assets/images/headerbg.png'
 
-export const Introduce = styled.div`
+export const Top = styled.div`
     width: 100vw;
     height: 100vh;
     color: #fafafa;
@@ -17,14 +17,34 @@ export const Menu = styled.div`
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    font-size: 30px;
     font-weight: bold;
     position: relative;
-    top: 20px;
+    top: 80px;
+    
+    @media (max-width: 900px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 700px) {
+        width: 90vw;
+        margin-left: 5vw;
+        font-size: 10px;
+
+        a:visited {
+            text-decoration: none;
+            color: #fafafa;
+        }
+
+        a:hover {
+            font-size: 12px;
+        }
+    }
 `
 export const SocialMenu = styled(Menu)`
-    font-size: 26px;
+    font-size: 30px;
     width: 14vw;
-    top: 2px;
+    top: 20px;
 
     a {
         text-decoration: none;
@@ -42,7 +62,9 @@ export const SocialMenu = styled(Menu)`
     }
 
     @media (max-width: 700px) {
-        width: 35vw;
+        width: 60vw;
+        font-size: 18px;
+        margin-left: 20vw;
     }
 `
 export const ClientMenu = styled(Menu)`
@@ -106,6 +128,6 @@ export const Span = styled.span`
     }
 `
 export const Logo = styled.img`
-    margin: 300px 20% 0 20%;
-    width: 60%;    
+    margin: 20%;
+    width: 60%;
 `
