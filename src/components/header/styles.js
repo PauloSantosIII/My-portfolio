@@ -128,6 +128,6 @@ export const Span = styled.span`
     }
 `
 export const Logo = styled.img`
-    margin: 20%;
-    width: 60%;
+    margin: 10%;
+    width: 80%;
 `

@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const Card = styled.div`
     width: 30vw;
-    height: 25vh;
+    height: 20vh;
         
     img {
         width: 100%;
@@ -52,10 +52,6 @@ export const Description = styled.p`
         text-decoration: underline;
         font-weight: bold;
     }
-
-    @media (max-width: 700px) {
-        max-width: 400px;
-    }
 `
 
 export const Subscription = styled.p`
@@ -77,25 +73,13 @@ export const Subscription = styled.p`
         text-decoration: underline;
         font-weight: bold;
     }
-
-    @media (max-width: 700px) {
-        max-width: 400px;
-    }
 `
 
 export const CarouselContainer = styled.div`
     width: 90vw;
-    height: 27vh;
+    height: 22vh;
     margin-left: 5vw;
     padding-top: 10px;
-    
-    @media (max-width: 1024px) {
-        width: 100%;
-    }
-
-    @media (max-width: 480px) {
-        display: none;
-    }
 
     .slick-arrow::before {
         color: #000;

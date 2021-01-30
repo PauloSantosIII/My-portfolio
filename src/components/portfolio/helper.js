@@ -62,7 +62,6 @@ export const settings = {
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
-            arrows: false,
           },
         },
         {
@@ -70,15 +69,13 @@ export const settings = {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
-            arrows: false,
           },
         },
         {
-          breakpoint: 480,
+          breakpoint: 500,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: false,
           },
         },
       ],
