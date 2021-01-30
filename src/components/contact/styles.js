@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import contact from '../../assets/images/contactbg.png'
 
-export const DivContact = styled.div`
+export const Container = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 5px;
@@ -13,7 +13,7 @@ export const DivContact = styled.div`
     justify-content: center;
     align-items: center;
 `
-export const ContactTitle = styled.h1`
+export const Title = styled.h1`
     color: #fafafa;
     text-decoration: underline;
     font-size: 50px;
@@ -108,24 +108,24 @@ export const Button = styled.button`
         font-size: 16px;
     }
 `
-export const SecondaryMenu = styled.div`
+export const Menu = styled.div`
     width: 50vw;
     height: 100%;
     display: flex;
     border-top: 3px solid #61dafb;
     margin: 40px 0 40px 30%;
 
-    @media (max-width: 700px) {
-        font-size: 10               px;
+    @media (max-width: 740px) {
+        font-size: 10px;
         margin-top: 15px;
     }
 `
-export const SecondaryMenuLeft = styled.div`
+Menu.Left = styled.div`
     display: flex;
     flex-direction: column;
     color: #61dafb;
     font-weight: bold;
-    width: 20%;
+    width: 35%;
     margin-left: 10%;
 
     a {
@@ -144,12 +144,12 @@ export const SecondaryMenuLeft = styled.div`
         color: #61dafb;
     }
 `
-export const SecondaryMenuCenter = styled.div`
+Menu.Center = styled.div`
     display: flex;
     flex-direction: column;
     color: #61dafb;
     font-weight: bold;
-    width: 20%;
+    width: 35%;
     margin-left: 10%;
 
     a {
@@ -168,30 +168,7 @@ export const SecondaryMenuCenter = styled.div`
         color: #61dafb;
     }
 `
-export const SecondaryMenuRight = styled.div`
-    display: flex;
-    flex-direction: column;
-    color: #61dafb;
-    font-weight: bold;
-    width: 40%;
-    
-    a {
-        text-decoration: none;
-        color: #fafafa;
-        font-weight: normal;
-        cursor: pointer;
-    }
-
-    a:visited {
-        text-decoration: none;
-        color: #fafafa;
-    }
-
-    a:hover {
-        color: #61dafb;
-    }
-`
-export const HeaderLogo = styled.img`
+export const HLogo = styled.img`
     position: absolute;
     width: 30%;
     left: 10vw;

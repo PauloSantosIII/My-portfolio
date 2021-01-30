@@ -1,18 +1,15 @@
 import React, { useState } from 'react'
 import {
-    DivContact,
-    ContactTitle,
+    Container,
+    Title,
     ContactP,
     Form,
     Label,
     Input,
     TextArea,
     Button,
-    SecondaryMenu,
-    SecondaryMenuLeft,
-    SecondaryMenuCenter,
-    SecondaryMenuRight,
-    HeaderLogo
+    Menu,
+    HLogo
 } from './styles'
 import { BiPen, BiMessageDetail } from 'react-icons/bi'
 import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai'
@@ -75,8 +72,8 @@ const Contact = () => {
 
 
     return (
-        <DivContact>
-            <ContactTitle id='fale_comigo'>Fale comigo</ContactTitle>
+        <Container>
+            <Title id='fale_comigo'>Fale comigo</Title>
             <ContactP>Dúvidas? Preencha os campos abaixo com os seguintes dados que em breve entrarei em contato.</ContactP>
             <Form onSubmit={formSubmit}>
                 <Label htmlFor='name'>
@@ -108,28 +105,26 @@ const Contact = () => {
                     <RiSendPlaneFill /> Enviar
                 </Button>
             </Form>
-            <a href='/'><HeaderLogo src={Logo} alt='Logo' /></a>
-            <SecondaryMenu>
-                <SecondaryMenuLeft>
+            <a href='/'><HLogo src={Logo} alt='Logo' /></a>
+            <Menu>
+                <Menu.Left>
                     <p>MENU</p>
                     <a href='#home'>HOME</a>
                     <a href='#quem_sou'>QUEM SOU</a>
                     <a href='#portfolio'>PORTFÓLIO</a>
                     <a href='#fale_comigo'>FALE COMIGO</a>
-                </SecondaryMenuLeft>
-                <SecondaryMenuCenter>
+                    <a href='mailto:paulosantosiii@outlook.com'><AiOutlineMail />paulosantosiii@outlook.com</a>
+                </Menu.Left>
+                <Menu.Center>
                     <p>REDES SOCIAIS</p>
                     <a href='https://www.linkedin.com/in/paulosantosiii/' target='_blank' rel='noopener noreferrer'>LINKEDIN</a>
                     <a href='https://github.com/PauloSantosIII' target='_blank' rel='noopener noreferrer'>GITHUB</a>
                     <a href='https://gitlab.com/PauloSantosIII' target='_blank' rel='noopener noreferrer'>GITLAB</a>
                     <a href='https://api.whatsapp.com/send?phone=5541984154262' target='_blank' rel='noopener noreferrer'>WHATSAPP</a>
                     <a href='tel:+41984154262'><MdLocalPhone />(41) 98415-4262</a>
-                </SecondaryMenuCenter>
-                <SecondaryMenuRight>
-                    Volte sempre
-                </SecondaryMenuRight>
-            </SecondaryMenu>
-        </DivContact>
+                </Menu.Center>
+            </Menu>
+        </Container>
     )
 }
 
