@@ -1,11 +1,11 @@
 import React from 'react'
-import { Top, Menu, SocialMenu, Span, Logo, /* ClientMenu */ } from './styles'
+import { Container, Menu, SocialMenu, Span, Logo, /* ClientMenu */ } from './styles'
 import Logotipo from '../../assets/images/logo.png'
 import { FaLinkedin, FaGitlab, FaGithub, FaWhatsapp, FaPhoneAlt } from 'react-icons/fa'
 
 const Header = () => {
     return (
-        <Top>
+        <Container>
             <SocialMenu id='home'>
                 <a href='https://www.linkedin.com/in/paulosantosiii/' target='_blank' rel='noopener noreferrer'><FaLinkedin /></a>
                 <a href='https://github.com/PauloSantosIII' target='_blank' rel='noopener noreferrer'><FaGithub /></a>
@@ -26,7 +26,7 @@ const Header = () => {
                     <a href='/login' >Cliente</a>|<a href='#fale_comigo'>Orçamento</a>
                 </Span>
             </ClientMenu> */}
-        </Top>        
+        </Container>        
     )
 }
 

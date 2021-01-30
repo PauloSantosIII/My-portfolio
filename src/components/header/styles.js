@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import header from '../../assets/images/headerbg.png'
 
-export const Top = styled.div`
+export const Container = styled.div`
     width: 100vw;
     height: 100vh;
     color: #fafafa;
@@ -17,10 +17,10 @@ export const Menu = styled.div`
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: bold;
     position: relative;
-    top: 80px;
+    top: 40px;
     
     @media (max-width: 900px) {
         font-size: 20px;
@@ -44,7 +44,7 @@ export const Menu = styled.div`
 export const SocialMenu = styled(Menu)`
     font-size: 30px;
     width: 14vw;
-    top: 20px;
+    top: 10px;
 
     a {
         text-decoration: none;

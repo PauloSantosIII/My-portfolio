@@ -1,30 +1,66 @@
 import React from 'react'
-import { DivPortfolio, DivScreen, DivScreenReact, DivProject } from './styles'
-import { Projects, ProjectsReact } from './projects'
+import { 
+    Container, 
+    Card, 
+    CarouselContainer, 
+    Title, 
+    Description, 
+    Subscription
+} from './styles'
+import { Projects, ProjectsReact, settings } from './helper'
+
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const Portfolio = () => {
     return (
-        <DivPortfolio id='portfolio'>
-            <DivScreen>
-                <DivProject>
-                    {Projects.map((project, index) => (
-                        <a href={project.link} target='_blank' rel='noopener noreferrer'>
-                            <img key={index} src={project.img} alt={project.id} />
-                        </a>  
-                    ))}
-                </DivProject>
-            </DivScreen>
+        <Container id='portfolio'>
+            <Title>Potifólio</Title>
+            
+            <Description>
+                ESTES SÃO PROJETOS EXECUTADOS DURANTE O CURSO DE DESENVOLVIMENTO FULL STACK
+                 NA <a 
+                 href='https://kenzie.com.br/curriculo.html' 
+                 target='_blank' 
+                 rel='noopener noreferrer'
+                 >
+                 KENZIE ACADEMY BRASIL
+                </a>.
+            </Description>
 
-            <DivScreenReact>
-                <DivProject>
-                    {ProjectsReact.map((project, index) => (
+            <Subscription>
+                Aqui são projetos em HTML5 + CSS3 + Javascript
+            </Subscription>
+            
+            <CarouselContainer>
+                <Slider {...settings}>
+                {Projects.map((project, index) => (
+                    <Card>
                         <a href={project.link} target='_blank' rel='noopener noreferrer'>
                             <img key={index} src={project.img} alt={project.id} />
                         </a>  
-                    ))}
-                </DivProject>
-            </DivScreenReact>
-        </DivPortfolio>
+                    </Card>
+                ))}
+                </Slider>
+            </CarouselContainer>
+
+            <Subscription>
+                Aqui são projetos em ReactJS
+            </Subscription>
+
+            <CarouselContainer>
+                <Slider {...settings}>
+                {ProjectsReact.map((project, index) => (
+                    <Card>
+                        <a href={project.link} target='_blank' rel='noopener noreferrer'>
+                            <img key={index} src={project.img} alt={project.id} />
+                        </a>
+                    </Card>
+                ))}
+                </Slider>
+            </CarouselContainer>           
+        </Container>
     )
 }
 

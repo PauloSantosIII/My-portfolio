@@ -17,17 +17,17 @@ app.post('/api/forma', (req, res) => {
     let data = req.body
     
     const transporter = nodemailer.createTransporter({
-        host: 'smtp.office365.com',
-        port: 587,
+        host: 'TRANSPORTER_HOST',
+        port: 'TRANSPORTER_PORT',
         auth: {
-            user: 'paulosantosiii@outlook.com',
-            password: 'Anack1503@'
+            user: 'TRANSPORTER_USER',
+            password: 'TRANSPORTER_PWD'
         }
     })
 
     const mailOptions = {
-        from: 'paulosantosiii@outlook.com',
-        to: 'paulosantosiii@outlook.com',
+        from: 'TRANSPORTER_USER',
+        to: 'TRANSPORTER_USER',
         replyTo: `${data.email}`,
         subject: `${data.subject}`,
         html: `

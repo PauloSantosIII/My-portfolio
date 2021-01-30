@@ -120,9 +120,8 @@ const Contact = () => {
                 <SecondaryMenuCenter>
                     <p>REDES SOCIAIS</p>
                     <a href='https://www.linkedin.com/in/paulosantosiii/' target='_blank' rel='noopener noreferrer'>LINKEDIN</a>
-                    <a href='https://gitlab.com/PauloSantosIII' target='_blank' rel='noopener noreferrer'>GITLAB</a>
                     <a href='https://github.com/PauloSantosIII' target='_blank' rel='noopener noreferrer'>GITHUB</a>
-                    <a href='https://www.instagram.com/paulosantosiii/' target='_blank' rel='noopener noreferrer'>INSTAGRAM</a>
+                    <a href='https://gitlab.com/PauloSantosIII' target='_blank' rel='noopener noreferrer'>GITLAB</a>
                     <a href='https://api.whatsapp.com/send?phone=5541984154262' target='_blank' rel='noopener noreferrer'>WHATSAPP</a>
                     <a href='tel:+41984154262'><MdLocalPhone />(41) 98415-4262</a>
                 </SecondaryMenuCenter>
