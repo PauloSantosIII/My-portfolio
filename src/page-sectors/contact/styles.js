@@ -115,6 +115,10 @@ export const Menu = styled.div`
     border-top: 3px solid #61dafb;
     margin: 40px 0 40px 30%;
 
+    p {
+        text-decoration: underline;
+    }
+
     @media (max-width: 740px) {
         font-size: 10px;
         margin-top: 15px;
@@ -125,8 +129,8 @@ Menu.Left = styled.div`
     flex-direction: column;
     color: #61dafb;
     font-weight: bold;
-    width: 35%;
-    margin-left: 10%;
+    width: 40%;
+    margin-left: 1%;
 
     a {
         text-decoration: none;
@@ -144,13 +148,13 @@ Menu.Left = styled.div`
         color: #61dafb;
     }
 `
-Menu.Center = styled.div`
+Menu.Right = styled.div`
     display: flex;
     flex-direction: column;
     color: #61dafb;
     font-weight: bold;
-    width: 35%;
-    margin-left: 10%;
+    width: 50%;
+    margin-left: 5%;
 
     a {
         text-decoration: none;
