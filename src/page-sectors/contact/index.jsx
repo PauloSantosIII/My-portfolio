@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
     Container,
     Title,
@@ -17,57 +17,20 @@ import { MdSubject } from 'react-icons/md'
 import { RiSendPlaneFill } from 'react-icons/ri'
 import Logo from '../../assets/images/logo.png'
 import { MdLocalPhone } from 'react-icons/md'
-import axios from 'axios'
+import emailjs from 'emailjs-com'
 
 const Contact = () => {
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [phone, setPhone] = useState('')
-    const [subject, setSubject] = useState('')
-    const [message, setMessage] = useState('')
-
-    const handleName = (e) => {
-        setName(e.target.value)
-    }
-
-    const handleEmail = (e) => {
-        setEmail(e.target.value)
-    }
-
-    const handlePhone = (e) => {
-        setPhone(e.target.value)
-    }
-
-    const handleSubject = (e) => {
-        setSubject(e.target.value)
-    }
-
-    const handleMessage = (e) => {
-        setMessage(e.target.value)
-    }
-
-    const formSubmit = (e) => {
+    
+    function sendEmail(e) {
         e.preventDefault()
-
-        let data = {
-            name,
-            email,
-            phone,
-            subject,
-            message
-        }
-
-        axios.post('/api/forma', data)
-        .then(() => {
-            setName('')
-            setEmail('')
-            setPhone('')
-            setSubject('')
-            setMessage('')
-        })
-        .catch((err) => {
-            console.log('Message has not sent!', err)
-        })
+    
+        emailjs.sendForm('contato_email', 'template_emailjs', e.target, 'user_CSKNQYEw0N3PO4QuvxAML')
+            .then((result) => {
+                console.log(result.text)
+            }, (error) => {
+                console.log(error.text)
+            })
+            e.target.reset()
     }
 
 
@@ -75,33 +38,34 @@ const Contact = () => {
         <Container>
             <Title id='fale_comigo'>Fale comigo</Title>
             <ContactP>Dúvidas? Preencha os campos abaixo com os seguintes dados que em breve entrarei em contato.</ContactP>
-            <Form onSubmit={formSubmit}>
+
+            <Form onSubmit={sendEmail}>
                 <Label htmlFor='name'>
                     <BiPen />
-                    <Input type='text' required placeholder='Nome' name='name' onChange={handleName} value={name} />
+                    <Input type='text' required placeholder='Nome' name='name' />
                 </Label>
                 
                 <Label htmlFor='email'>
                     <AiOutlineMail />
-                    <Input type='email' required placeholder='Email' name='email' onChange={handleEmail} value={email} />
+                    <Input type='email' required placeholder='Email' name='email' />
                 </Label>
                 
                 <Label htmlFor='phone'>
                     <AiOutlineWhatsApp />
-                    <Input type='tel' required placeholder='Telefone'  name='phone' onChange={handlePhone} value={phone} />
+                    <Input type='tel' required placeholder='Telefone'  name='phone' />
                 </Label>
                 
                 <Label htmlFor='subject'>
                     <MdSubject />
-                    <Input type='text' required placeholder='Assunto'  name='subject' onChange={handleSubject} value={subject} />
+                    <Input type='text' required placeholder='Assunto'  name='subject' />
                 </Label>
                 
                 <Label htmlFor='message'>
                     <BiMessageDetail />
-                    <TextArea type='textArea' required placeholder='Mensagem'  name='message' onChange={handleMessage} value={message} />
+                    <TextArea type='textArea' required placeholder='Mensagem'  name='message' />
                 </Label>
                 
-                <Button type='submit'>
+                <Button type='submit' value='Send'>
                     <RiSendPlaneFill /> Enviar
                 </Button>
             </Form>
