@@ -13,11 +13,13 @@ export const ImageContainer = styled.div`
     height: 70vh;
 
     @media (max-width: 1024px) {
-        height: 40vh;
+        height: 100vh;
         width: 100vw;
         display: flex;
         align-items: center;
         justify-content: center;
+        position: absolute;
+        z-index: 2;
     }
 `
 
@@ -36,7 +38,17 @@ export const Image = styled.img`
     }
 
     @media (max-width: 1024px) {
-        height: 40vh;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.2;
+        position: absolute;
+        z-index: 2;
+        animation: myphototb 5s linear;
+
+        @keyframes myphototb {
+        from {opacity: 0.0;}
+        to {opacity: 0.2;}
+    }
     }
 `
 
@@ -78,11 +90,36 @@ export const Info = styled.div`
     }
 
     @media (max-width: 1024px) {
-        height: 30vh;
-        width: 100vw;
+        height: 60vh;
+        width: 90vw;
+        margin-left: 5vw;
+        padding: 0 auto;
+
+        h1 {
+            font-size: 2em;
+            margin: 0 5vw;
+            border-bottom: 1px solid #61dafb;
+        }
 
         p {
-            font-size: 1.2em;
+            font-size: 1em;
+        }
+    }
+
+    @media (max-width: 520px) {
+        height: 60vh;
+        width: 90vw;
+        margin-left: 5vw;
+        border: 1px solid red;
+
+        h1 {
+            font-size: 1em;
+            margin: 0 5vw;
+            border-bottom: 1px solid #61dafb;
+        }
+
+        p {
+            font-size: 0.8em;
         }
     }
 `
@@ -146,25 +183,48 @@ export const BaseBoard = styled.div`
     }
 
     @media (max-width: 1024px) {
-        height: 30vh;
+        height: 40vh;
         width: 100vw;
+        padding: 0;
 
         p {
-            font-size: 1.4em;
+            font-size: 1em;
             text-align: left;
+            height: 10vh;
+
+            @keyframes show {
+                from {
+                    height: 0;
+                }
+                to {
+                    height: 10vh;
+                }
+            }
         }
 
         h1 {
             height: 10vh;
-            font-size: 5em;
+            font-size: 3.5em;
         }
 
         h3 {
-            width: 90vw;
-            margin-left: 5vw;
-            margin-top: -10vh;
-            font-size: 2em;
-            text-align: center;
+            width: 80vw;
+            margin-left: 10vw;
+            font-size: 1em;
+        }
+    }
+
+    @media (max-width: 550px) {
+        p {
+            font-size: 0.7em;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h3 {
+            font-size: 0.8em;
         }
     }
 `
