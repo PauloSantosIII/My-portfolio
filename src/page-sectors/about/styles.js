@@ -46,9 +46,9 @@ export const Image = styled.img`
         animation: myphototb 5s linear;
 
         @keyframes myphototb {
-        from {opacity: 0.0;}
-        to {opacity: 0.2;}
-    }
+            from {opacity: 0.0;}
+            to {opacity: 0.2;}
+        }
     }
 `
 
@@ -107,15 +107,9 @@ export const Info = styled.div`
     }
 
     @media (max-width: 520px) {
-        height: 60vh;
-        width: 90vw;
-        margin-left: 5vw;
-        border: 1px solid red;
 
         h1 {
             font-size: 1em;
-            margin: 0 5vw;
-            border-bottom: 1px solid #61dafb;
         }
 
         p {
