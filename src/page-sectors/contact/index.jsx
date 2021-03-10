@@ -31,18 +31,16 @@ const Contact = () => {
         e.preventDefault()
     
         emailjs.sendForm(
-            process.env.REACT_APP_YOUR_SERVICE_ID,
-            process.env.REACT_APP_YOUR_TEMPLATE_ID,
+            process.env.production.REACT_APP_YOUR_SERVICE_ID,
+            process.env.production.REACT_APP_YOUR_TEMPLATE_ID,
             e.target,
-            process.env.REACT_APP_YOUR_USER_ID
+            process.env.production.REACT_APP_YOUR_USER_ID
         )
             .then((result) => {
-                console.log(result.text)
                 setMessage('Mensagem enviada com sucesso!')
                 afterSendMail()
             }, (error) => {
-                console.log(error.text)
-                setMessage('Algo está errado!')
+                setMessage(error.text)
                 afterSendMail()
             })
             e.target.reset()
