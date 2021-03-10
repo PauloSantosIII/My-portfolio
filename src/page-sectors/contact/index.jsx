@@ -31,10 +31,10 @@ const Contact = () => {
         e.preventDefault()
     
         emailjs.sendForm(
-            process.env.production.REACT_APP_YOUR_SERVICE_ID,
-            process.env.production.REACT_APP_YOUR_TEMPLATE_ID,
+            'contato_email',// process.env.REACT_APP_YOUR_SERVICE_ID,
+            'template_emailjs',// process.env.REACT_APP_YOUR_TEMPLATE_ID,
             e.target,
-            process.env.production.REACT_APP_YOUR_USER_ID
+            'user_CSKNQYEw0N3PO4QuvxAML'// process.env.REACT_APP_YOUR_USER_ID
         )
             .then((result) => {
                 setMessage('Mensagem enviada com sucesso!')
