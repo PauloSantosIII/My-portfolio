@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
     Container,
     Title,
@@ -9,7 +9,8 @@ import {
     TextArea,
     Button,
     Menu,
-    HLogo
+    HLogo,
+    Message
 } from './styles'
 import { BiPen, BiMessageDetail } from 'react-icons/bi'
 import { AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai'
@@ -20,15 +21,29 @@ import { MdLocalPhone } from 'react-icons/md'
 import emailjs from 'emailjs-com'
 
 const Contact = () => {
+    const [message, setMessage] = useState('')
     
-    function sendEmail(e) {
+    const afterSendMail = () => {
+        setTimeout(() => setMessage(''), 2500)
+    }
+
+    const sendEmail = (e) => {
         e.preventDefault()
     
-        emailjs.sendForm('contato_email', 'template_emailjs', e.target, 'user_CSKNQYEw0N3PO4QuvxAML')
+        emailjs.sendForm(
+            process.env.REACT_APP_YOUR_SERVICE_ID,
+            process.env.REACT_APP_YOUR_TEMPLATE_ID,
+            e.target,
+            process.env.REACT_APP_YOUR_USER_ID
+        )
             .then((result) => {
                 console.log(result.text)
+                setMessage('Mensagem enviada com sucesso!')
+                afterSendMail()
             }, (error) => {
                 console.log(error.text)
+                setMessage('Algo está errado!')
+                afterSendMail()
             })
             e.target.reset()
     }
@@ -68,6 +83,7 @@ const Contact = () => {
                 <Button type='submit' value='Send'>
                     <RiSendPlaneFill /> Enviar
                 </Button>
+                <Message>{message}</Message>
             </Form>
             <a href='/'><HLogo src={Logo} alt='Logo' /></a>
             <Menu>

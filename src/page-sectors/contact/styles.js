@@ -91,7 +91,7 @@ export const Button = styled.button`
     width: 300px;
     border-radius: 25px;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 5px;
     font-size: 24px;
     border: none;
     cursor: pointer;
@@ -176,4 +176,8 @@ export const HLogo = styled.img`
     position: absolute;
     width: 30%;
     left: 10vw;
+`
+export const Message = styled.p`
+    color: yellow;
+    font-size: 12px;
 `
