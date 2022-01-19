@@ -42,10 +42,15 @@ export const Menu = styled.div`
     }
 `
 export const SocialMenu = styled(Menu)`
-    font-size: 30px;
-    width: 14vw;
-    top: 10px;
-
+    display: block;
+    position: fixed;
+    font-size: 25px;
+    justify-content: space-between;
+    width: 2vw;
+    top: 10vh;
+    right: 15px;
+    z-index: 10;
+    
     a {
         text-decoration: none;
         color: #fafafa;
@@ -62,9 +67,12 @@ export const SocialMenu = styled(Menu)`
     }
 
     @media (max-width: 700px) {
-        width: 60vw;
-        font-size: 18px;
-        margin-left: 20vw;
+        display: flex;
+        position: relative;
+        width: 40vw;
+        font-size: 15px;
+        left: 30vw;
+        top: 10px;
     }
 `
 export const ClientMenu = styled(Menu)`
@@ -130,4 +138,8 @@ export const Span = styled.span`
 export const Logo = styled.img`
     margin: 10%;
     width: 80%;
+
+    @media (max-width: 700px) {
+        margin-top: 30vh;
+    }
 `
