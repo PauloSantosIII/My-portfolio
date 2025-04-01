@@ -1,12 +1,12 @@
 import React from 'react'
-import Menu from '../../components/Menu'
+import Menu from '../components/Menu'
 // import { Image } from '../../components/Image'
 // import Logotipo from '../../assets/images/logo.png'
 
 const Header = () => {
   return (
-    <header className='w-screen h-screen bg-[url("")] bg-primary bg-cover text-font-white'>
-      <Menu />
+    <header className='w-screen h-screen bg-home-image text-font-white' id='quem-sou'>
+      <Menu />     
       
       
       {/* <a href='/'>
