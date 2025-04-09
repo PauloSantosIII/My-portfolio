@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
+import { AosInit } from './components/aos-init'
 
 const fingerPaint = localFont({
   src: '../../public/fonts/FingerPaint-Regular.ttf',
@@ -8,16 +9,13 @@ const fingerPaint = localFont({
 })
 
 const londrinaSolid = localFont({
-  src: [
-    {
-      path: '../../public/fonts/LondrinaSolid-Regular.ttf',
-      weight: '400'
-    },
-    {
-      path: '../../public/fonts/LondrinaSolid-Black.ttf',
-      weight: '700'
-    },
-  ]
+  src: '../../public/fonts/LondrinaSolid-Regular.ttf',
+  weight: '400'
+})
+
+const londrinaOutline = localFont({
+  src: '../../public/fonts/LondrinaOutline-Regular.ttf',
+  weight: '400'
 })
 
 export const metadata: Metadata = {
@@ -30,9 +28,10 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return(
     <html lang='pt-BR'>
       <body
-        className={`${fingerPaint.className} ${londrinaSolid.className} antialiased`}
+        className={`${fingerPaint.className} ${londrinaOutline.className} ${londrinaSolid.className} antialiased`}
       >
         {children}
+        <AosInit />
       </body>
     </html>
   )

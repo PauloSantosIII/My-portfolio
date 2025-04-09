@@ -24,6 +24,8 @@
     ]
   },
   "include": [
+    "video.d.ts",
+    "video.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "build/types/**/*.ts",
