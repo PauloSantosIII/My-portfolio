@@ -2,43 +2,32 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "axios": "^0.20.0",
-    "cross-env": "^7.0.3",
-    "dot-env": "^0.0.1",
-    "emailjs-com": "^2.6.4",
-    "nodemon": "^2.0.6",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-icons": "^3.11.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
-    "react-slick": "^0.28.0",
-    "slick-carousel": "^1.8.1",
-    "styled-components": "^5.2.0"
-  },
   "scripts": {
-    "start": "cross-env react-scripts start",
-    "build": "cross-env react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "aos": "^2.3.4",
+    "axios": "^1.3.4",
+    "gsap": "^3.12.5",
+    "lucide-react": "^0.487.0",
+    "next": "^15.2.4",
+    "next-video": "^2.2.0",
+    "nodemon": "^3.1.7",
+    "postcss": "^8.5.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5"
   }
 }
